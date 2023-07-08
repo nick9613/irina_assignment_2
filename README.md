@@ -1,1 +1,1 @@
-# irina_assignment_2
+# k8s-assignment
