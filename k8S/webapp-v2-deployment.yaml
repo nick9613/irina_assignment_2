@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-v2
+  labels:
+    app.kubernetes.io/name: app
+    app.kubernetes.io/component: frontend
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: app
+      app.kubernetes.io/component: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: app
+        app.kubernetes.io/component: frontend
+    spec:
+      containers:
+      - name: app
+        image: 897193292353.dkr.ecr.us-east-1.amazonaws.com/docker-assignment:v0.2
+        env:
+        - name: DBHOST
+          value: 10.96.75.170 
+        - name: DBUSER
+          value: root
+        - name: DBPWD
+          value: pwd
+        - name: DATABASE
+          value: employees
+        - name: APP_COLOR
+          value: green
+        ports:
+        - containerPort: 8081
