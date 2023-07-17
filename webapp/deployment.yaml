@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp-deployment
-  namespace: nik-app
+  namespace: webapp
   labels:
     app: webapp
     version: v1
@@ -18,9 +18,9 @@ spec:
         app: webapp
         version: v1
     spec:
-       containers:
+      containers:
       - name: app
-        image: 137816499949.dkr.ecr.us-east-1.amazonaws.com/week10-dev-repository:app-v0.1
+        image: 897193292353.dkr.ecr.us-east-1.amazonaws.com/docker-assignment:v0.1
         env:
         - name: DBHOST
           value: 10.96.220.119 
