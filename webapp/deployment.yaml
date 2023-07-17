@@ -20,10 +20,10 @@ spec:
     spec:
        containers:
       - name: app
-        image: 897193292353.dkr.ecr.us-east-1.amazonaws.com/docker-assignment:v0.1
+        image: 137816499949.dkr.ecr.us-east-1.amazonaws.com/week10-dev-repository:app-v0.1
         env:
         - name: DBHOST
-          value: 10.96.75.170 
+          value: 10.96.220.119 
         - name: DBUSER
           value: root
         - name: DBPWD
