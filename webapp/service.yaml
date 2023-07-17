@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: webapp-service
-  namespace: webapp
+  namespace: nik-app
   labels:
     app: webapp
     version: v1
