@@ -5,16 +5,21 @@ metadata:
   namespace: webapp
 spec:
   containers:
-    - name: websrv-img
-      image: 132456686334.dkr.ecr.us-east-1.amazonaws.com/websrv-img:webserver_version_1
-      env:
-        - name: DBPWD
-          value: "12345"
+    containers:
+      - name: app
+        image: 897193292353.dkr.ecr.us-east-1.amazonaws.com/docker-assignment:v0.1
+        env:
+        - name: DBHOST
+          value: 10.96.75.170 
         - name: DBUSER
           value: root
-        - name: DBHOST
-          value: "mysql-service.sqldb.svc.cluster.local"
-        - name: DBPORT
-          value: "3306"
+        - name: DBPWD
+          value: pwd
+        - name: DATABASE
+          value: employees
+        - name: APP_COLOR
+          value: blue
+        ports:
+        - containerPort: 8080
       ports:
         - containerPort: 8080
