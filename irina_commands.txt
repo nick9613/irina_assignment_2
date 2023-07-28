@@ -1,0 +1,71 @@
+
+
+eksctl create cluster -f eks_config.yaml
+kubectl create –f kubia-statefulset
+kubectl create -f kubia-statefulset.yaml
+kubectl version
+kubectl --version
+sudo yum install -y kubectl
+
+kubectl version
+kubectl cluster-info
+
+brew install kubectl
+
+kubectl cluster-info
+minikube status
+kubectl apply -f kubia-statefulset.yaml
+
+
+kubectl cluster-info
+ssh -i 3.220.235.248 week8-dev
+git clone https://github.com/nick9613/clo835_nikki_assignment1.git
+docker build -t my_db -f Dockerfile_mysql .
+docker build -t my_app -f Dockerfile .
+aws ecr get-login --no-include-email --region us-east-1 | bash
+docker build -t week8-dev-repository .
+docker tag week8-dev-repository:latest 137816499949.dkr.ecr.us-east-1.amazonaws.com/week8-dev-repository:latest
+docker push 137816499949.dkr.ecr.us-east-1.amazonaws.com/week8-dev-repository:latest
+docker pull 137816499949.dkr.ecr.us-east-1.amazonaws.com/week8-dev-repository:mysql-v5.6
+docker images
+ssh -i week8-dev ec2-user@3.220.235.248
+terraform destroy
+terraform apply
+git clone https://github.com/nick9613/irina_assignment_2.git
+scp -i week8-dev init_kind.sh kind.yaml 35.172.36.128:/tmp
+ssh -i week8-dev ec2-user@35.172.36.128
+terraform destroy
+ssh-keygen -t rsa -f week8-dev
+terraform destroy
+terraform apply
+kubectl get all
+kubectl get a;;
+vi mysql-deployment.yaml
+vi webserver-deployment.yaml
+kubectl apply -f mysql-service.yaml
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f webserver-deployment.yaml
+kubectl get all
+vi ~/.aws/credentials
+nano aws_access_key_id = ASIASAFUA43WTLFZTD5K
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 137816499949.dkr.ecr.us-east-1.amazonaws.com
+kubectl delete deployment
+kubectl delete webserver-deployment.yaml
+kubectl get pods
+kubectl delete app-765c4576dc-4kf8
+
+
+sudo apt-get update -y
+sudo apt-get install mysql-client -y
+
+aws ecr get-login --no-include-email --region us-east-1 | bash
+
+kubectl apply -f mysql-pod.yaml
+kubectl apply -f webapp-pod.yaml
+kubectl apply -f mysql-replicaset.yaml
+kubectl apply -f webapp-replicaset.yaml
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f webapp-deployment.yaml
+kubectl apply -f mysql-service.yaml
+kubectl apply -f webapp-service.yaml
+
