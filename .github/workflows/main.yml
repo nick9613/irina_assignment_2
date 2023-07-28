@@ -25,7 +25,7 @@ jobs:
       - name: Build and Push Application Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: week10-dev-repository #helloeee
+          ECR_REPOSITORY: week12-dev-repository #helloeee
           IMAGE_TAG: app-v0.1
         run: |
           cd docker/
@@ -35,7 +35,7 @@ jobs:
       - name: Build and Push MySQL Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: week10-dev-repository
+          ECR_REPOSITORY: week12-dev-repository
           IMAGE_TAG: sql-v1.0
         run: |
           cd docker/
